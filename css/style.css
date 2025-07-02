@@ -4,6 +4,8 @@
     margin-top: 0;
 }
 
+
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -14,8 +16,12 @@
     color: var(--main-color);
 }
 
+#black-color{
+    color: #000000;
+}
 body {
     max-width: 1440px;
+    padding: 0 20px 0 20px;
     margin: 0 auto;
 }
 
@@ -43,8 +49,11 @@ h1{
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.hebergements-and-populaires .card{
+    padding: 5px;
 }
 
 .card img {
@@ -120,19 +129,14 @@ header p{
     font-size:18px;
 }
 
-.filtres button{
-    height:50px;
-    font-weight: 600;
-    background-color: white;
-    border: solid 2px #d9d9d9;
-    border-radius: 25px;
-    padding: 4px 19px 4px 19px;
+.filtres-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
-.filtres img{
-    width: 22px;
-    height: 22px;
-}
+
+
 
 .search{
     display:flex;
@@ -187,6 +191,17 @@ header p{
     align-items: center;
     gap: 10px;
     font-size: 17px;
+    height:50px;
+    font-weight: 600;
+    background-color: white;
+    border: solid 2px #d9d9d9;
+    border-radius: 25px;
+    padding: 4px 19px 4px 19px;
+}
+
+.btn-ico img{
+    width: 22px;
+    height: 22px;
 }
 
 .btn-ico:hover{
@@ -213,6 +228,8 @@ header p{
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-content: flex-start;
     gap: 30px
@@ -227,11 +244,12 @@ header p{
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 75%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap:30px;
 
 }
 
@@ -273,7 +291,7 @@ header p{
     font-size: 16px;
 }
 
-a{
+.hebergements-cards a{
     margin-top: 30px;
 }
 
@@ -283,8 +301,13 @@ a{
 }
 /****** Populaires ***********/
 .populaires {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
     width: 32%;
 }
+
 
 .populaires-title {
     display: flex;
@@ -317,6 +340,67 @@ a{
     margin-bottom: 5px;
 }
 
+/*** Activité ***/
+
+#id_activities{
+    margin-top: 35px;
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.activites-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.activites-cards .card{
+    width: 297px;
+    height: 439px;
+    border-radius: 20px;
+}
+
+.activites-cards .card img{
+    width: 297px;
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+}
+
+.activites-cards .card .card-title{
+    padding: 15px 19px 15px 19px;
+}
+
+
+/*** footer ***/
+footer{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.footer-title{
+    padding: 15px;
+}
+
+.footer-title h3{
+    margin-bottom: 15px;
+}
+
+.footer-subtitle{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+    gap: 15px;
+}
+
 
 
 
@@ -335,6 +419,13 @@ a{
         width: 100%;
     }
 
+    .hebergements-cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -344,6 +435,7 @@ a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+ 
     }
 
     .populaires-cards a {
@@ -357,9 +449,39 @@ a{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-cards {
+        max-width: 100%;
+        gap: 15px;
+    }
+
+    .activites-cards .card{
+        width:193px;
+        height: 270px
+    }
+
+    .activites-cards .card img{
+        width: 193px;
+        height: 200px; 
+    }
+
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filtres-btn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
 }
