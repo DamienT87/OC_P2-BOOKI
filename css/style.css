@@ -437,7 +437,7 @@ footer{
     .hebergements-cards{
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 15px;
     }
 
     .populaires {
