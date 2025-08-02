@@ -248,7 +248,7 @@ header p{
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -437,7 +437,7 @@ footer{
     .hebergements-cards{
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        gap: 20px;
     }
 
     .populaires {
@@ -470,12 +470,12 @@ footer{
     }
 
     .activites-cards .card{
-        width:193px;
+        width:175px;
         height: 270px
     }
 
     .activites-cards .card img{
-        width: 193px;
+        width: 175px;
         height: 200px; 
     }
 
